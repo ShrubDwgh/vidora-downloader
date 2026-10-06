@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #ffffff;
+    --text: #171717;
+    --muted: #737373;
+    --border: #e5e5e5;
+  }
+
+  .dark {
+    --bg: #0a0a0a;
+    --text: #ededed;
+    --muted: #a3a3a3;
+    --border: #262626;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+  }
+}
+
+@layer components {
+  .skeleton {
+    @apply animate-pulse rounded-md bg-neutral-200 dark:bg-neutral-800;
+  }
+
+  .status-text {
+    @apply text-sm font-medium text-neutral-600 dark:text-neutral-400;
+  }
+
+  .status-text-active {
+    @apply text-sm font-medium text-blue-600 dark:text-blue-400;
+  }
+
+  .status-text-error {
+    @apply text-sm font-medium text-red-600 dark:text-red-400;
+  }
+}
